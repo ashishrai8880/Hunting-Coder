@@ -11,8 +11,8 @@ const Slug = (props) => {
       <main className={styles.main}>
         <h1>Title of the page {blogData.title}</h1>
         <hr />
-        <div>
-          { blogData ? blogData.content : ''}
+        <div dangerouslySetInnerHTML={{__html: blogData.content}}>
+          {/* { blogData ? blogData.content : ''} */}
         </div>
       </main>
     </div>
